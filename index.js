@@ -115,7 +115,7 @@ kibounohana.View.renderMainView_title = function () {
     return `<div>
         <style>
         .main-view {
-            background: #345 url(${kibounohana.assetUrl('img/main-title-bg.jpg')}) center right no-repeat;
+            background: #345 url(${kibounohana.assetUrl('img/main-title-bg.jpg')}) center no-repeat;
             background-size: cover;
             width: 100%;
             height: ${kibounohana.displayTarget.offsetHeight}px;
@@ -151,7 +151,7 @@ kibounohana.View.renderMainView_intro = function () {
             font-size: 20px;
             color: #FFF;
             line-height: 1.5;
-            background: #345 url(${kibounohana.assetUrl('img/intro-1.jpg')}) center right no-repeat;
+            background: #345 url(${kibounohana.assetUrl('img/intro-1.jpg')}) center no-repeat;
             background-size: cover;
             width: 100%;
             height: ${kibounohana.displayTarget.offsetHeight}px;
@@ -202,7 +202,7 @@ kibounohana.View.renderMainView_basic = function (currentSceneObj) {
             font-size: 22px;
             color: #FFF;
             line-height: 1.6;
-            background: #345 url(${kibounohana.assetUrl('img/intro-1.jpg')}) center right no-repeat;
+            background: #345 url(${kibounohana.assetUrl('img/' + currentSceneObj.bg)}) center no-repeat;
             background-size: cover;
             width: 100%;
             height: ${kibounohana.displayTarget.offsetHeight}px;
@@ -237,6 +237,10 @@ kibounohana.View.renderDialogueWindow = function (dialogueObj) {
     console.log(dialogueObj);
     return `<div>
         <style>
+        .main-view {
+            background-image: url(${kibounohana.assetUrl('img/' + dialogueObj.bg)});
+            background-size: cover;
+        }
         .main-view .dialogue-window {
             position: absolute;
             left: 0px;
@@ -256,7 +260,7 @@ kibounohana.View.renderDialogueWindow = function (dialogueObj) {
         }
         .main-view .dialogue-window .dialogue-text {
             padding: 15px;
-            min-height: 300px;
+            min-height: 170px;
         }
         </style>
         <div class="dialogue-window">
